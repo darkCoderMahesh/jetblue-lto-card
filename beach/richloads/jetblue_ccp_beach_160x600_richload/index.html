@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Flashtalking In-Banner Video Ad using Custom Elements</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+    <script type="text/javascript" src="https://cdn.flashtalking.com/frameworks/js/gsap/latest/TweenMax.min.js"></script>
+		<script src="CustomEase.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="main.js" defer></script>
+	</head>
+	<body>
+		<div id="container">
+			<!-- <ft-video id="video1" name="video1" autoplay></ft-video> -->
+			<!--
+				Flashtalking Custom Element Documentation:
+				https://flashtalkingsupport.zendesk.com/hc/en-us/sections/360000054268-JS-Docs-2-10-Elements
+			-->
+			
+			<img id="sky" src="images/sky.jpg">
+     	 <img id="sea" src="./images/sea.png">
+
+	  	<div id="copy1" class="hidden">
+			<img src="images/text1.png" width="74px" alt="">
+		</div>
+
+		<div id="copy2" class="hidden">
+			<img src="images/text2.png" width="140px" alt="">
+		</div>
+
+		<div id="copy3" class="hidden">
+			<img src="images/text3.png" width="100px" alt="">
+		</div>
+
+		<div id="textWrapper">
+			<div id="copy4" class="hidden">
+				That’s at least
+			</div>
+
+			<div id="copy5" class="hidden">
+				$700
+			</div>
+
+			<div id="copy6" class="hidden">
+				in award travel
+			</div>
+		</div>
+			
+      <img id="sand" src="./images/sand.png">
+      <img id="man" src="./images/man.png">
+
+
+			<!-- <div class="rectangle"></div> -->
+
+			<!-- <img id="test" src="images/test.jpg" alt=""> -->
+      
+			<div id="endframe" class="">
+				<img id="card" src="images/bg.jpg" alt="">
+				<div class="contour-wrap">
+					<div class="contour">
+					</div>
+				</div>
+				<div id="pink-bar"></div>
+				<div id="endframe_headline">
+					<span class="">Earn <spna class="fuchsia">70,000<br>
+						bonus points<br></spna>
+						with the <br>
+						JetBlue<br> Plus Card.</span>
+				</div>
+				<div id="terms">Terms Apply</div>
+				<div id="cta">Apply now</div>
+			</div>
+			<div id="footer">
+				<img src="./images/logo.png" width="143px" id="logo">
+				<img src="./images/logoWhite.png" id="logoWhite" width="143px" class="hidden">
+			</div>
+		</div>
+    <div id="default_exit"></div>
+		<!-- 
+			Flashtalking HTML5 API Documentation:
+			https://flashtalkingsupport.zendesk.com/hc/en-us/articles/360000616047-Class-FT  
+		-->
+		<script src="https://cdn.flashtalking.com/frameworks/js/api/2/10/html5API.js"></script>
+	</body>
+</html>

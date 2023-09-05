@@ -263,9 +263,10 @@ background: linear-gradient(121deg, rgba(20,18,103,1) 0%, rgba(11,74,199,1) 44%,
         rgba(255, 255, 255, 0.1) 55%,
         transparent 100%);
         
-  transition: all 5s;
-  transform: rotate(45deg);
-  animation: shine 4s infinite forwards;
+      transition: all 3s;
+      transform: rotate(45deg);
+      animation: shine 10s forwards;
+      animation-delay: 13s;
 }
 
 @keyframes shine {
