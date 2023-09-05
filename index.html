@@ -24,6 +24,10 @@
         }
         body{
             font-family: "ESKlarheitGrotesk Xbd";
+            background-color: #e5e5f7;
+/* opacity: 0.8; */
+background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+background-size: 10px 10px;
         }
         h3{
           margin-bottom: 15px;
@@ -64,11 +68,51 @@
           padding: 15px 50px;
           padding-top: 25px;
         }
+        .backups{
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          margin: 10px;
+          flex-wrap: wrap;
+        }
+        .card{
+          position: absolute;
+          top: 100px;
+          right: 0px;
+          width: 600px;
+        }
+        .routeHeading{
+          font-size: 34px;
+        }
+        @keyframes smoothShake {
+          0% {
+            transform: translateX(0);
+          }
+          20% {
+            transform: translateX(-5px);
+          }
+          40% {
+            transform: translateX(5px);
+          }
+          60% {
+            transform: translateX(-3px);
+          }
+          80% {
+            transform: translateX(3px);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+
+        .smooth-shake-element {
+          animation: smoothShake 1s ease-in-out infinite;
+        }
     </style>
   </head>
   <body>
     <header><img src="./beach/richloads/jetblue_ccp_beach_300x250_richload/images/logoWhite.png" width="200px" alt=""></header>
-    <div style="padding: 50px">
+    <div style="padding: 50px; position: relative;">
       <h2 class="routeHeading">Jet Blue - Card Platform</h2>
 
       <h3>Hiker</h3>
@@ -104,6 +148,28 @@
           <a style="text-decoration: none" target="_blank" href="./beach/base/jetblue_ccp_beach_728x90_base/index.html">728x90</a>
         </li>
       </ul>
+      <img src="card.png" class="card smooth-shake-element " alt="">
+    </div>
+
+    <div class="backups">
+      
+      <figure>
+        <img src="./beach/backups/JetBlue_Credit_Card_Platform_160x600_backup.jpg" alt="">
+        <figcaption>31kb</figcaption>
+      </figure>
+
+      <figure>
+        <img src="./beach/backups/JetBlue_Credit_Card_Platform_300x600_backup.jpg" alt="">
+        <figcaption>27kb</figcaption>
+      </figure>
+      <figure>
+        <img src="./beach/backups/JetBlue_Credit_Card_Platform300x250_backup.jpg" alt="">
+        <figcaption>35kb</figcaption>
+      </figure>
+      <figure>
+        <img src="./beach/backups/JetBlue_Credit_Card_Platform_728x90_backup.jpg" alt="">
+        <figcaption>33kb</figcaption>
+      </figure>
     </div>
 
     </div>
