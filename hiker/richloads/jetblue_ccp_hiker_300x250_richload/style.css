@@ -239,9 +239,10 @@ div, img {
         rgba(255, 255, 255, 0.1) 55%,
         transparent 100%);
         
-  transition: all 5s;
-  transform: rotate(45deg);
-  animation: shine 4s infinite forwards;
+        transition: all 3s;
+        transform: rotate(45deg);
+        animation: shine 10s forwards;
+        animation-delay: 13s;
 }
 
 @keyframes shine {
