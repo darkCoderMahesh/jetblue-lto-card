@@ -27,41 +27,23 @@ myFT.on('instantads',function(){
 init()
 
 function animate() {
-  const cardBounce = CustomEase.create("custom", "M0,0,C0,0,0.05,0.228,0.09,0.373,0.12,0.484,0.139,0.547,0.18,0.654,0.211,0.737,0.235,0.785,0.275,0.864,0.291,0.896,0.303,0.915,0.325,0.944,0.344,0.97,0.356,0.989,0.38,1.009,0.413,1.039,0.441,1.18,0.48,1.08,0.496,1.089,0.51,1.091,0.53,1.095,0.552,1.099,0.582,1.1,0.6,1.1,0.716,1.1,0.716,1.064,0.8,1.024,0.865,0.992,1,1,1,1");
-
-  tl.set("#container", { autoAlpha: 0, force3D: true });
-  // tl.set("#cta", { autoAlpha: 0, force3D: true, rotation: .001 });
-  // tl.set("#card", { autoAlpha: 0, scale: 0.3 });
-  // tl.set(['#terms'], { autoAlpha: 0})
-
   // let video play
   tl.addLabel('start', 0)
-  .to('#container', 0.5, { autoAlpha: 1 }, 'start+=0.5')
-  // .to('#logo',0, {autoAlpha:1})
-  .staggerTo(['#copy1', '#copy2', '#copy3'], 1, { autoAlpha: 1, ease: "expo.out" }, 0.1, 'start+=2.5')
-  .staggerFrom(['#copy1', '#copy2', '#copy3'], 1, { y: '+=200', ease: "expo.out" }, 0.1, 'start+=2.5')
+    .to('#container', 0.5, { autoAlpha: 1 }, 'start+=0.5')
+    .staggerTo(['#copy1', '#copy2', '#copy3'], 1, { autoAlpha: 1, ease: "expo.out" }, 0.3, 'start+=2.5')
+    .staggerFrom(['#copy1', '#copy2', '#copy3'], 1, { y: '+=200', ease: "expo.out" }, 0.3, 'start+=2.5')
+    .to('.copyF1', 0.5, {alpha: 0, delay: 2})
+    .staggerTo(['#copy4', '#copy5', '#copy6'], 1, { autoAlpha: 1, ease: "expo.out" }, 0.1, 'start+=6.5')
+    .staggerFrom(['#copy4', '#copy5', '#copy6'], 1, { y: '+=200', ease: "expo.out" }, 0.1, 'start+=6.5')
+    .to('#footer', 0.5, {css: { 'opacity': '0'}, delay: 1.5})
+    .to('#footer', 0.1, {css: {'filter': 'brightness(0) invert(1)', delay: 1.5}})
+    .to('#endframe', 1, { left: 0, ease: "expo.out" })
+    .to('#footer', 0.5, {css: { 'opacity': '1'}})
+    .to('#shine', 0.5, {backgroundPosition: '98px 0px'});
 
-  .to(['#copy1', '#copy2', '#copy3'], 0.5, { autoAlpha: 0 }, 'start+=6') // This will hide the first screen copy layers
-
-  .staggerTo(['#copy4', '#copy5', '#copy6'], 1, { autoAlpha: 1, ease: "expo.out" }, 0.1, 'start+=7')
-  .staggerFrom(['#copy4', '#copy5', '#copy6'], 1, { y: '+=200', ease: "expo.out" }, 0.1, 'start+=7')
-    .to(['#endframe-right'], 0.5, { left: 0, ease: "expo.out" }, '+=3')
-    .to(['#endframe_headline', '#terms'], 0.5, { autoAlpha: 1 }, '-=0.5')
-
-    tl.to(['#sand, #man'], 7, { 
-      transform: "translate3d(50px, 10px, 0) scale(1.05)", 
-      ease: Power1.easeInOut 
-    }, 0)
-    // tl.to(['#sand', '#man'], 3, { transform: "translate3d(190px, 10px, 1px) scale(1.05)", ease: Power1.easeInOut }, 2)
-    // tl.to(['#sky'], 3, { transform: "translate3d(50px, 15px, 1px)", ease: Power1.easeInOut }, 2)
-    tl.to(['#sea'], 7, { 
-      transform: "translate3d(0px, 10px, 0) scale(1.15)", 
-      ease: Power1.easeInOut 
-    }, 0)
-    tl.to(['#sky'], 7, { 
-      transform: "translate3d(10px, 0px, 0) scale(1.3)", 
-      ease: Power1.easeInOut 
-    }, 0)
+    tl.to(['#sand, #man'], 9, { transform: "translate3d(40px, 7px, 1px) scale(1.05)", ease: Power1.easeInOut }, 0)
+    tl.to(['#sea'], 9, { transform: "translate3d(0px, 10px, 1px) scale(1.15)", ease: Power1.easeInOut }, 0)
+    tl.to(['#sky'], 9, { transform: "translate3d(10px, 0px, 1px) scale(1.3)", ease: Power1.easeInOut }, 0)
 }
 
 function setRollover() {
